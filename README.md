@@ -32,10 +32,10 @@ Make sure you are logged into the IBM Cloud using the IBM Cloud CLI and have acc
 to you development cluster. If you are using OpenShift make sure you have logged into OpenShift CLI on the command line.
 
 ```$bash
-npm install -g @ibmgaragecloud/cloud-native-toolkit-cli
+npm install --location=global @ibmgaragecloud/cloud-native-toolkit-cli
 ```
 
-Use the IBM Garage for Cloud CLI to register the GIT Repo with Tekton or Jenkins 
+Use the IBM Garage for Cloud CLI to register the GIT Repo with Tekton or Jenkins, using `--tekton` flag if using Tekton:
 
 ```$bash
 oc sync <project> [--tekton]
