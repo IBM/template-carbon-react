@@ -1,0 +1,7 @@
+@use './components/Header/header';
+@use './components/Info/info';
+@use './content/LandingPage/landing-page';
+
+.app .cds--content {
+  margin-top: 3rem;
+}
