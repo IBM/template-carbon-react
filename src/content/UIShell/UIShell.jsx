@@ -13,9 +13,9 @@ import {
 } from '@carbon/react/icons';
 import { Route, Routes, BrowserRouter, Link } from 'react-router-dom';
 
-import ErrorBoundary from "./ErrorBoundary";
-import LandingPage from '../../content/LandingPage';
-import NotFound from '../NotFound';
+import ErrorBoundary from "../../components/ErrorBoundary";
+import LandingPage from '../LandingPage';
+import NotFound from '../../components/NotFound';
 
 
 class UIShell extends React.Component {
