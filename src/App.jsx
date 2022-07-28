@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import UIShell from './components/UIShell/UIShell';
+import UIShell from './content/UIShell/UIShell';
 import './App.scss';
 
 class App extends Component {
