@@ -16,6 +16,6 @@ test('renders text', () => {
     }))
   });
   render(<App />);
-  const linkElement = screen.getByText(/Carbon React UI/i);
+  const linkElement = screen.getByText(/Design & build with Carbon/i);
   expect(linkElement).toBeInTheDocument();
 });
