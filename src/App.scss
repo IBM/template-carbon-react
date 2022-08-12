@@ -1,6 +1,6 @@
 @use './components/Header/header';
 @use './components/Info/info';
-@use './components/UIShell/UIShell';
+@use './content/UIShell/UIShell';
 @use './content/LandingPage/landing-page';
 
 .app .cds--content {

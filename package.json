@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
     "@carbon/react": "^1.8.0",
     "@tanstack/react-query": "^4.0.10",
     "@testing-library/jest-dom": "^5.16.4",
