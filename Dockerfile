@@ -7,6 +7,7 @@ WORKDIR /opt/app-root/src
 COPY --chown=default:root . .
 RUN npm i -g yarn && \
     yarn install && \
+    yarn cache clean && \
     yarn build
 
 FROM registry.access.redhat.com/ubi8/nodejs-16:1-52
@@ -19,7 +20,8 @@ COPY --from=builder --chown=default:root /opt/app-root/src/build ./build
 COPY --chown=default:root package.json yarn.lock server ./
 
 RUN npm i -g yarn && \
-    yarn --production
+    yarn install --production && \
+    yarn cache clean
 
 ENV NODE_ENV=production
 ENV HOST=0.0.0.0 PORT=3000
