@@ -16,9 +16,7 @@ USER default
 WORKDIR /opt/app-root/src
 
 COPY --from=builder --chown=default:root /opt/app-root/src/build ./build
-COPY --chown=default:root package.json .
-COPY --chown=default:root yarn.lock .
-COPY --chown=default:root server ./server
+COPY --chown=default:root package.json yarn.lock server ./
 
 RUN npm i -g yarn && \
     yarn --production
