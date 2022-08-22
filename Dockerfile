@@ -10,14 +10,15 @@ RUN npm i -g yarn && \
     yarn cache clean && \
     yarn build
 
-FROM registry.access.redhat.com/ubi8/nodejs-16:1-52
+FROM registry.access.redhat.com/ubi8/nodejs-16-minimal:1-59
 
-USER default
+USER 1001
 
 WORKDIR /opt/app-root/src
 
-COPY --from=builder --chown=default:root /opt/app-root/src/build ./build
-COPY --chown=default:root package.json yarn.lock server ./
+COPY --from=builder --chown=1001:0 /opt/app-root/src/build ./build
+COPY --chown=1001:0 package.json yarn.lock ./
+COPY --chown=1001:0 server ./server
 
 RUN npm i -g yarn && \
     yarn install --production && \
